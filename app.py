@@ -1,4 +1,3 @@
-# smart_docs_app.py
 # ================================================================
 # Codenection Docs Assistant (Google Docs style with AI)
 # ================================================================
@@ -20,7 +19,6 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_JUSTIFY, TA_LEFT
 import io, re, unicodedata
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
 
 load_dotenv()
 
@@ -50,23 +48,10 @@ def chunk_text(text, chunk_size=800, overlap=100):
     return chunks
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-#MODEL_DIR = "./transformer_model"
-MODEL_DIR = "sentence-transformers/all-MiniLM-L6-v2"  # or your model
-model = SentenceTransformer(MODEL_DIR, device="cpu")
+MODEL_DIR = "./transformer_model"
 
-@st.cache_resource
-def load_model():
-    if os.path.exists(MODEL_DIR) and len(os.listdir(MODEL_DIR)) != 0:
-        return SentenceTransformer(MODEL_DIR, device="cpu")
-    else:
-        model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu")
-        os.makedirs(MODEL_DIR, exist_ok=True)
-        model.save(MODEL_DIR)
-        return model
-
-model = load_model()
 # Check if local model directory exists
-if len(os.listdir(MODEL_DIR)) != 0:
+if os.path.exists(MODEL_DIR):
     print(f"Loading model from local directory: {MODEL_DIR}")
     model = SentenceTransformer(MODEL_DIR)
 else:
