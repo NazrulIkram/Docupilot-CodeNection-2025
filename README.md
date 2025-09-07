@@ -1,12 +1,20 @@
 # Documentation for Docupilot
 
+**Team Name:** Vibe Coder
+
+**Team Members**:
+1. Muhammad Izzhan Hakimi bin Mohd Izzmir
+2. Nazrul Ikram bin Nazarulanuar
+3. Iskandar Hakim bin Burhanuddin
+4. Wan Muhammad Afiq Zafry bin Wan Burahanudin
+
 **Track:** Industry Collaboration
 
 **Problem Statement:** Fix the Docs: Smarter, Faster, Maintainable Documentation for the Real World by iFAST
 
 This document provides comprehensive technical documentation for the `Docupilot` project. It covers the project's purpose, architecture, setup instructions, usage, and key components.
 
-**This documentation was created using `Docupilot`.**
+**This documentation was created using `Docupilot`, and was reviewed by humans.**
 
 ---
 
