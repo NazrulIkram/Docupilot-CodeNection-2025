@@ -1,0 +1,7 @@
+numpy
+faiss-cpu
+requests
+streamlit
+reportlab
+sentence-transformers
+google-generativeai
