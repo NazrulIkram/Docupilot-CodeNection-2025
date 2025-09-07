@@ -53,7 +53,7 @@ MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 MODEL_DIR = "./transformer_model"
 
 # Check if local model directory exists
-if len(os.listdir(MODEL_DIR)) == 0:
+if len(os.listdir(MODEL_DIR)) == 0:
     print(f"Loading model from local directory: {MODEL_DIR}")
     model = SentenceTransformer(MODEL_DIR)
 else:
