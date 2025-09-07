@@ -50,7 +50,9 @@ def chunk_text(text, chunk_size=800, overlap=100):
     return chunks
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-MODEL_DIR = "./transformer_model"
+#MODEL_DIR = "./transformer_model"
+MODEL_DIR = "sentence-transformers/all-MiniLM-L6-v2"  # or your model
+model = SentenceTransformer(MODEL_DIR, device="cpu")
 
 # Check if local model directory exists
 if len(os.listdir(MODEL_DIR)) != 0:
