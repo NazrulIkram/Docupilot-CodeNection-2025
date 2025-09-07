@@ -54,13 +54,17 @@ MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 MODEL_DIR = "sentence-transformers/all-MiniLM-L6-v2"  # or your model
 model = SentenceTransformer(MODEL_DIR, device="cpu")
 
-if os.path.exists(MODEL_DIR) and len(os.listdir(MODEL_DIR)) != 0:
-    model = SentenceTransformer(MODEL_DIR, device="cpu")
-else:
-    model = SentenceTransformer("sentence-transformer/all-MiniLM-L6-v2", device="cpu")
-    os.makedirs(MODEL_DIR, exist_ok=True)
-    model.save(MODEL_DIR)
+@st.cache_resource
+def load_model():
+    if os.path.exists(MODEL_DIR) and len(os.listdir(MODEL_DIR)) != 0:
+        return SentenceTransformer(MODEL_DIR, device="cpu")
+    else:
+        model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu")
+        os.makedirs(MODEL_DIR, exist_ok=True)
+        model.save(MODEL_DIR)
+        return model
 
+model = load_model()
 # Check if local model directory exists
 if len(os.listdir(MODEL_DIR)) != 0:
     print(f"Loading model from local directory: {MODEL_DIR}")
