@@ -1,6 +1,9 @@
 # Documentation for Docupilot
 
-This document provides comprehensive technical documentation for the `nazrulikram-docupilot-codenection-2025` project. It covers the project's purpose, architecture, setup instructions, usage, and key components.
+Track: Industry Collaboration
+Problem Statement: Fix the Docs: Smarter, Faster, Maintainable Documentation for the Real World by iFAST
+
+This document provides comprehensive technical documentation for the `Docupilot` project. It covers the project's purpose, architecture, setup instructions, usage, and key components.
 This documentation was created using Docupilot.
 
 ## Table of Contents
