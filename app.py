@@ -424,7 +424,7 @@ st.markdown(
 # Fixed header using st.image + st.markdown inside placeholders
 header_col1, header_col2 = st.columns([1, 10])
 with header_col1:
-    st.image("logo docupilot.png", width=100)
+    st.image("logo_docupilot.png", width=100)
 with header_col2:
     st.markdown("<h1 style='color:#f5f5f5; margin:0;'>DocuPilot</h1>", unsafe_allow_html=True)
 
