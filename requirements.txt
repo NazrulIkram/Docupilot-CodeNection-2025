@@ -5,3 +5,4 @@ streamlit
 reportlab
 sentence-transformers
 google-generativeai
+dotenv
