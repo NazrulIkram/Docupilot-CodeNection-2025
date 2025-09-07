@@ -106,7 +106,7 @@ Follow these steps to set up and run the `Docupilot` application on your local m
 First, open your terminal or command prompt and clone the project repository:
 
 ```bash
-git clone https://github.com/nazrulikram/nazrulikram-docupilot-codenection-2025.git
+git clone -b master https://github.com/NazrulIkram/Docupilot-CodeNection-2025
 cd docupilot-codenection-2025
 ```
 
